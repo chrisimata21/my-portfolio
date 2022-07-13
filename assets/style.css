@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d3d3d3;
+}
+header {
+    text-align: center;
+    border-style: solid;
+    width: 100%;
+    padding: 15px 35px;
+    background-color: #d3d3d3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+header h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    color: black;
+    margin: 0;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+header nav {
+    margin: 7px 0;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+footer {
+    border-style: solid;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #d3d3d3;
+    color: black;
+    width: 100%;
+    padding: 15px 35px;
+}
+img {
+    padding: 35px 0 35px 0;
+    opacity: 0.5;
+    border: 15px 35px;
+    max-width: 100%;
+}
+.about {
+    margin: 10px 40px 300px 0;
+    padding: 0 50px 0 50px;
+}
+.work {
+    padding: 0 50px 0 50px;
+}
+.contact-me h2{
+    font-weight: bold;
+    font-size: 36px;
+    margin: 0;
+}
+.contact-me a {
+    text-decoration: none;
+    color: black;
+}
