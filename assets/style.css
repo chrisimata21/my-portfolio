@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #adadad;
+    background-color: #b6b6b6;
     font-family: Arial, Helvetica, sans-serif;
 }
 p {
@@ -13,6 +13,7 @@ p {
     padding: 2px 5px;
 }
 header {
+    padding: 20px 35px;
     background-color: #242424;
     border-radius: 0 0 7px 7px;
     padding: 20px 35px;
@@ -21,36 +22,17 @@ header {
     justify-content: space-between;
 }
 header h1 {
-    text-align: center;
     font-weight: bold;
     font-size: 36px;
-    color: #adadad;
+    color: #b6b6b6;
     margin: 0;
 }
 header a {
-    position: relative;
     text-decoration: none;
     color: #adadad;
-    padding: 0 10px;
-}
-header a:after {
-    content: "";
-    position: absolute;
-    background-color: #adadad;
-    height: 2px;
-    width: 0;
-    left: 0;
-    bottom: -3px;
-    transition: 0.3s;
-}
-header a:hover:after {
-    width: 100%;
 }
 header nav {
-    margin: 7px 1.55vw 7px 0;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
+    margin: 7px 0;
 }
 header nav ul {
     display: flex;
@@ -76,7 +58,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #242424;
-    color: #adadad;
+    color: #b6b6b6;
     width: 100%;
     padding: 15px 35px;
 }
@@ -90,11 +72,11 @@ img {
     opacity: 0.5;
 }
 .about {
-    margin: 10px;
+    margin-top: 30px;
     padding: 0 50px;
 }
 .work {
-    margin: 10px;
+    margin-top: 30px;
     padding: 0 50px;
 }
 .contact-me h2{
@@ -106,5 +88,5 @@ img {
 .contact-me a {
     text-decoration: none;
     font-style: normal;
-    color: #adadad;
+    color: #b6b6b6;
 }
