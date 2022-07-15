@@ -76,7 +76,7 @@ footer {
     position: relative;
     border-style: solid;
     margin: 15px;
-    height: 500px;
+    height: 325px;
     filter: grayscale(100%);
 }
 .work img:hover {
