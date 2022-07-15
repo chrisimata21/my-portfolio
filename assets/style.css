@@ -11,7 +11,6 @@ header {
     padding: 20px 35px;
     background-color: #242424;
     border-radius: 0 0 7px 7px;
-    padding: 20px 35px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -52,13 +51,10 @@ header nav ul li a {
 footer {
     border-radius: 7px 7px 0 0;
     bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     background-color: #242424;
     color: #b6b6b6;
     width: 100%;
-    padding: 15px 35px;
+    padding: 20px 35px;
 }
 .code-screen img {
     width: 100%;
@@ -81,20 +77,34 @@ footer {
     border-style: solid;
     margin: 15px;
     height: 500px;
-    filter: grayscale(75%);
+    filter: grayscale(100%);
 }
 .work img:hover {
     transition: 0.2s ease-in;
     filter: grayscale(0%);
 }
-.contact-me h2{
+footer h2 {
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 36px;
+    color: #b6b6b6;
     margin: 0;
+}
+footer a {
+    text-decoration: none;
+    color: #b6b6b6;
+}
+footer address {
+    margin: 7px 0;
+}
+footer address ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
 }
-.contact-me a {
-    text-decoration: none;
-    font-style: normal;
-    color: #b6b6b6;
+footer address ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 1.55vw;
 }
