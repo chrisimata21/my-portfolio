@@ -80,7 +80,8 @@ footer {
 }
 .work img:hover {
     border-style: solid;
-    transition: 0.3s;
+    transition: 0.1s ease-in;
+    filter: grayscale(100%);
 }
 .contact-me h2{
     font-weight: bold;
