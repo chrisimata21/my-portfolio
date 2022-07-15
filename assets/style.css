@@ -41,6 +41,9 @@ header nav ul li a {
     font-weight: lighter;
     font-size: 1.55vw;
 }
+.navbar a:hover {
+    text-decoration: underline;
+}
 * {
     margin: 0;
     padding: 0;
@@ -66,26 +69,27 @@ footer {
     opacity: 0.5;
 }
 .about {
-    margin-top: 30px;
+    margin: 30px 100px;
     padding: 0 50px;
 }
 .work {
-    margin-top: 30px;
+    margin: 30px 100px;
     padding: 10px 50px;
 }
 .work img {
-    height: 325px;
-    padding: 10px;
-    filter: opacity(75%);
+    position: relative;
+    border-style: solid;
+    margin: 15px;
+    height: 500px;
+    filter: grayscale(75%);
 }
 .work img:hover {
-    border-style: solid;
-    transition: 0.1s ease-in;
-    filter: grayscale(100%);
+    transition: 0.2s ease-in;
+    filter: grayscale(0%);
 }
 .contact-me h2{
     font-weight: bold;
-    font-size: 1.55vw;
+    font-size: 2vw;
     margin: 0;
     list-style: none;
 }
