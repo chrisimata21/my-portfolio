@@ -3,90 +3,313 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Christopher's Portfolio - Web Developer and Tech Professional" />
+    <meta name="description" content="Christopher Mata - Full Stack Developer & Tech Professional Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Christopher Mata - Portfolio</title>
   </head>
   <body>
-    <header>
-      <h1>Chrisimata21</h1>
-      <nav class="navbar">
-        <ul>
-          <li>
-            <a href="./index.html#about-me">About Me</a>
-          </li>
-          <li>
-            <a href="./index.html#work">Work</a>
-          </li>
-          <li>
-            <a href="./assets/files/Christopher Mata Resume.pdf" target="_blank"
-              >Resume</a
-            >
-          </li>
-          <li>
-            <a href="./index.html#contact-me">Contact Me</a>
-          </li>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h1>Christopher Mata</h1>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./assets/files/Christopher Mata Resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
         </ul>
-      </nav>
-    </header>
-    <section class="code-screen">
-      <img src="./assets/images/code-screen.jpg" alt="screen full of code" />
-    </section>
-    <section id="about-me" class="about">
-      <div>
-        <h2>About Me</h2>
-        <p>
-          My name is Christopher and I am a highly motivated and self taught
-          tech professional seeking an entry-level career opportunity in the
-          tech industry. I have taken a few different certifications and
-          completed Google IT Support certification and am currently enrolled in
-          UC Davis coding bootcamp. I have been into computers since I can
-          remember. I started by building a computer myself when I was in middle
-          school and my passion took off from there. I am very meticulous about
-          providing top notch customer service for all clients making sure to go
-          above and beyond to get the job done. I work well independently, or in
-          a group setting. I am excited to begin a career as an engineer! Some
-          of my hobbies consist of playing video games, working on my car, and
-          playing guitar!
-        </p>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Hi, I'm <span class="highlight">Christopher</span></h1>
+          <h2 class="hero-subtitle">Full Stack Developer & Tech Professional</h2>
+          <p class="hero-description">
+            Passionate about creating innovative solutions and bringing ideas to life through code.
+            Currently expanding my skills through UC Davis Coding Bootcamp.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/cimataaa/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:chrisimata21@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/chrisimata21" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="work" class="work">
-      <div>
-        <h2>Work</h2>
-        <p>
-          <a href="https://bops.herokuapp.com/"
-            ><img src="./assets/images/Screenshot 2022-12-12 at 9.37.44 AM.png"
-          /></a>
-          <a href="./assets/images/IMG_1991.jpg"
-            ><img src="./assets/images/IMG_1991.jpg" /></a
-          ><br />
-          <a href="./assets/images/IMG_1846.jpg"
-            ><img src="./assets/images/IMG_1846.jpg"
-          /></a>
-          <a href="./assets/images/IMG_1992.jpg"
-            ><img src="./assets/images/IMG_1992.jpg"
-          /></a>
-        </p>
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-intro">
+              I'm a highly motivated and self-taught tech professional with a passion for innovation and problem-solving.
+            </p>
+            <p>
+              My journey in technology began in middle school when I built my first computer, sparking a lifelong passion 
+              for technology. Since then, I've earned multiple certifications including the Google IT Support certification 
+              and am currently enhancing my skills through the UC Davis Coding Bootcamp.
+            </p>
+            <p>
+              I excel at providing exceptional customer service and have a meticulous approach to delivering quality solutions. 
+              Whether working independently or as part of a team, I'm committed to going above and beyond to achieve results.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <i class="fas fa-graduation-cap"></i>
+                <span>UC Davis Coding Bootcamp</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-certificate"></i>
+                <span>Google IT Support Certified</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-users"></i>
+                <span>Team Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <footer>
-      <section id="contact-me" class="contact-me">
-        <h2>Contact Me</h2>
-        <address>
-          <ul>
-            <li>(510)934-2331</li>
-            <li>
-              <a href="mailto:chrisimata21@gmail.com">chrisimata21@gmail.com</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/cimataaa/" target="_blank"
-                >LinkedIn</a
-              >
-            </li>
-          </ul>
-        </address>
-      </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-items">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-items">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">Databases</span>
+              <span class="skill-tag">APIs</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Other</h3>
+            <div class="skill-items">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">IT Support</span>
+              <span class="skill-tag">Problem Solving</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card featured">
+            <div class="project-image">
+              <img src="./assets/images/Screenshot 2022-12-12 at 9.37.44 AM.png" alt="BOPS Application" />
+              <div class="project-overlay">
+                <a href="https://bops.herokuapp.com/" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>BOPS - Business Operations Platform</h3>
+              <p>A comprehensive business management application built with modern web technologies.</p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Database</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./assets/images/IMG_1991.jpg" alt="Project 2" />
+              <div class="project-overlay">
+                <a href="./assets/images/IMG_1991.jpg" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Portfolio Project</h3>
+              <p>Description of your project goes here. What technologies did you use?</p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./assets/images/IMG_1846.jpg" alt="Project 3" />
+              <div class="project-overlay">
+                <a href="./assets/images/IMG_1846.jpg" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Development Project</h3>
+              <p>Another project description highlighting your skills and achievements.</p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./assets/images/IMG_1992.jpg" alt="Project 4" />
+              <div class="project-overlay">
+                <a href="./assets/images/IMG_1992.jpg" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Technical Solution</h3>
+              <p>Showcase your problem-solving abilities with this project example.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Problem Solving</span>
+                <span class="tech-tag">Innovation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="contact-subtitle">Ready to bring your next project to life? Let's discuss how we can work together.</p>
+        
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <a href="mailto:chrisimata21@gmail.com">chrisimata21@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3>Phone</h3>
+                <a href="tel:+15109342331">(510) 934-2331</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <i class="fab fa-linkedin"></i>
+              <div>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/cimataaa/" target="_blank">Connect with me</a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-cta">
+            <h3>Ready to get started?</h3>
+            <p>Whether you're looking for a developer, have a project in mind, or just want to connect, I'd love to hear from you!</p>
+            <a href="mailto:chrisimata21@gmail.com" class="btn btn-primary">Send me an email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2025 Christopher Mata. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/in/cimataaa/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:chrisimata21@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/chrisimata21" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      // Mobile menu toggle
+      const hamburger = document.querySelector('.hamburger');
+      const navMenu = document.querySelector('.nav-menu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      }));
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
