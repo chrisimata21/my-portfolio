@@ -1163,6 +1163,35 @@ body {
 }
 
 /* ===== DARK THEME SPECIFIC ADJUSTMENTS ===== */
+[data-theme="dark"] .section-title {
+    color: #ffffff;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .skill-category h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .project-info h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .contact-item h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .contact-cta h3 {
+    color: #ffffff;
+}
+
 [data-theme="dark"] .btn-primary {
     background: var(--primary-color);
     color: white;
