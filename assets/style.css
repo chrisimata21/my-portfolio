@@ -991,7 +991,7 @@ body {
     pointer-events: none;
 }
 
-/* ===== MUSIC PLAYER ===== */
+/* ===== MUSIC PLAYER (HIDDEN) ===== */
 .music-player {
     position: fixed;
     bottom: 20px;
@@ -1003,6 +1003,11 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    /* HIDDEN FROM VIEW */
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .music-toggle {
