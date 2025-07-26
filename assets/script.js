@@ -495,7 +495,7 @@ const textArray = [
   "Full Stack Developer",
   "Tech Professional", 
   "Problem Solver",
-  "UC Davis Bootcamp Student",
+  "UC Davis Coding Bootcamp Certified",
   "Innovation Enthusiast"
 ];
 
