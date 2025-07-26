@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(var(--bg-rgb), 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
@@ -104,7 +104,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -193,8 +193,9 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(30, 38, 75, 0.8) 0%, rgba(51, 32, 70, 0.8) 100%);
+    background: var(--hero-overlay);
     z-index: -1;
+    transition: background 0.5s ease;
 }
 
 .hero-content {
@@ -811,4 +812,405 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
+}
+
+/* ===== JAVASCRIPT ANIMATIONS ===== */
+
+/* Typing Animation */
+.cursor {
+    color: var(--primary-color);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar Scroll Effect */
+.navbar.scrolled {
+    background: rgba(var(--bg-rgb), 0.98);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(20px);
+}
+
+/* Skill Animation */
+.skill-tag {
+    transform: scale(0.8);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.skill-tag.skill-animate {
+    transform: scale(1);
+    opacity: 1;
+    animation: skillPop 0.5s ease-out;
+}
+
+@keyframes skillPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Enhanced Project Card Animations */
+.project-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Staggered Animation Delays */
+.animate-on-scroll:nth-child(1) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(2) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.4s; }
+
+/* Pulse Animation for CTA Buttons */
+.btn-primary {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== DARK/LIGHT THEME STYLES ===== */
+:root {
+    --bg-color: #ffffff;
+    --bg-rgb: 255, 255, 255;
+    --text-color: #333333;
+    --card-bg: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --hero-overlay: linear-gradient(135deg, rgba(30, 38, 75, 0.8) 0%, rgba(51, 32, 70, 0.8) 100%);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --bg-rgb: 26, 26, 26;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow: rgba(0, 0, 0, 0.3);
+    --hero-overlay: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(20, 20, 20, 0.8) 100%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.about, .skills, .projects, .contact {
+    background-color: var(--bg-color);
+    transition: background-color 0.5s ease;
+}
+
+.project-card, .skill-category, .contact-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: all 0.5s ease;
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    background-color: var(--border-color);
+    transform: scale(1.1);
+}
+
+.theme-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover i {
+    transform: rotate(180deg);
+}
+
+/* ===== PARTICLE CANVAS ===== */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ===== MUSIC PLAYER ===== */
+.music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px var(--shadow);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.music-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.music-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+.music-controls {
+    display: none;
+    padding: 15px;
+    min-width: 280px;
+    animation: slideIn 0.3s ease;
+}
+
+.music-controls.active {
+    display: block;
+}
+
+.music-info {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.music-info span {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.music-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.music-buttons button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--border-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.music-buttons button:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+.music-buttons button.playing {
+    background: var(--primary-color);
+    color: white;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volume-control i {
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+.volume-control input[type="range"] {
+    flex: 1;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-control input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+    }
+}
+
+/* ===== 3D TILT EFFECTS ===== */
+.project-card, .skill-category, .contact-item {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover, .skill-category:hover, .contact-item:hover {
+    box-shadow: 0 20px 40px var(--shadow);
+}
+
+/* ===== ENHANCED ANIMATIONS ===== */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--primary-color);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
+    }
+}
+
+.skill-tag:hover {
+    animation: glow 2s infinite;
+}
+
+/* ===== DARK THEME SPECIFIC ADJUSTMENTS ===== */
+[data-theme="dark"] .btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-secondary {
+    border-color: white;
+    color: white;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS FOR NEW FEATURES ===== */
+@media (max-width: 768px) {
+    .theme-toggle {
+        font-size: 1rem;
+        padding: 6px;
+    }
+    
+    #particle-canvas {
+        display: none; /* Hide particles on mobile for performance */
+    }
+    
+    .project-card, .skill-category, .contact-item {
+        transform: none !important; /* Disable 3D effects on mobile */
+    }
+    
+    .music-player {
+        bottom: 10px;
+        right: 10px;
+    }
+    
+    .music-controls {
+        min-width: 250px;
+        padding: 12px;
+    }
+    
+    .music-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
 }

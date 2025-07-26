@@ -12,6 +12,37 @@
     <title>Christopher Mata - Portfolio</title>
   </head>
   <body>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Music Player -->
+    <div id="music-player" class="music-player">
+      <button id="music-toggle" class="music-toggle" aria-label="Toggle music">
+        <i class="fas fa-music"></i>
+      </button>
+      <div id="music-controls" class="music-controls">
+        <div class="music-info">
+          <span id="track-name">Ambient Coding</span>
+        </div>
+        <div class="music-buttons">
+          <button id="prev-track" aria-label="Previous track">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <button id="play-pause" aria-label="Play/Pause">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="next-track" aria-label="Next track">
+            <i class="fas fa-step-forward"></i>
+          </button>
+        </div>
+        <div class="volume-control">
+          <i class="fas fa-volume-down"></i>
+          <input type="range" id="volume-slider" min="0" max="100" value="30">
+          <i class="fas fa-volume-up"></i>
+        </div>
+      </div>
+    </div>
+    
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
@@ -25,6 +56,11 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="./assets/files/Christopher Mata Resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
         </ul>
         <div class="hamburger">
           <span class="bar"></span>
@@ -39,7 +75,10 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="hero-title">Hi, I'm <span class="highlight">Christopher</span></h1>
-          <h2 class="hero-subtitle">Full Stack Developer & Tech Professional</h2>
+          <h2 class="hero-subtitle">
+            <span id="typed-text"></span>
+            <span class="cursor" id="cursor">|</span>
+          </h2>
           <p class="hero-description">
             Passionate about creating innovative solutions and bringing ideas to life through code.
             Currently expanding my skills through UC Davis Coding Bootcamp.
@@ -281,35 +320,6 @@
       </div>
     </footer>
 
-    <script>
-      // Mobile menu toggle
-      const hamburger = document.querySelector('.hamburger');
-      const navMenu = document.querySelector('.nav-menu');
-
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-      });
-
-      // Close mobile menu when clicking on a link
-      document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      }));
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-    </script>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
